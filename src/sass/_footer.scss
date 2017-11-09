@@ -1,0 +1,35 @@
+.footer {
+  font-size: 16px;
+
+  .wrapper {
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__social-icon {
+    background-color: $orange;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-left: 15px;
+    transition: 200ms background-color ease;
+
+    &:hover {
+      background-color: $black;
+    }
+
+    .fa {
+      color: $white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

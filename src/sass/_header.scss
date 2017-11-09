@@ -1,47 +1,138 @@
 .header {
-  background-image: url(../images/bike-by-andreas-kambanis.jpg);
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  filter: brightness(120%);
-  height: 100vh;
-  min-height: 700px;
-  width: 100%;
-  position: relative;
+  background-color: $white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 
-  h2 {
-    font-family: 'Lato', sans-serif;
+  &.sticky {
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 100;
   }
 
-  &__bar {
-    background-color: $white;
-    position: absolute;
-    bottom: 60px;
-    left: 0;
-    right: 0;
-
-    &-inner {
+  &__left {
+    a {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 20px 30px;
+    	align-items: center;
     }
 
-    &-text {
-      font-size: 40px;
-    }
+     img {
+       max-width: 150px;
+     }
+  }
 
-    &-button {
-      font-weight: 300;
-      text-transform: uppercase;
-      background-color: $black;
-      color: $white;
-      font-size: 30px;
-      padding: 20px 30px;
-    }
+  &__right {
+  	display: flex;
+  	align-items: center;
+    position: relative;
+  }
+
+  &__nav {
+    background-color: $white;
+
+  	@media (min-width: $md-width-plus) {
+  		display: block!important;
+  	}
+
+  	@media (max-width: $md-width) {
+  		width: 100%;
+  		display: none;
+  	}
+
+  	ul {
+  		list-style-type: none;
+  		margin: 0;
+  		padding: 0;
+      font-weight: 400;
+
+  		li {
+  			display: inline-block;
+  			margin-left: 35px;
+
+        &:last-of-type {
+          margin-left: 0;
+        }
+
+  			a {
+  				display: block;
+  				color: $black;
+  				text-align: center;
+  				width: 100%;
+          font-size: 20px;
+
+  				&.active, &:active {
+  					color: $orange;
+
+            &:hover, &:focus {
+              color: $orange;
+            }
+  				}
+
+  				&:hover, &:focus {
+            color: $orange;
+
+            @media (max-width: $md-width) {
+              color: $black;
+              background-color: $grey;
+            }
+  				}
+
+          &.header__nav-button {
+            display: none;
+
+          	@media (max-width: $md-width) {
+              display: block;
+            }
+          }
+  			}
+  		}
+  	}
+  }
+
+  &__hamburger {
+  	display: none;
+
+  	@media (max-width: $md-width) {
+  		display: flex;
+  		align-items: center;
+  		flex-wrap: wrap;
+  		width: 50px;
+  		height: 50px;
+  		cursor: pointer;
+  	}
+
+  	&-bar {
+  		height: 5px;
+  		width: 100%;
+  		background-color: $black;
+  		transition: 0.3s transform;
+  	}
+
+  	&--open {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      .header__hamburger {
+        &-bar {
+    			&--top {
+    				transform: rotate(45deg);
+    				position: relative;
+    				right: 0;
+    				top: 12.5px;
+    			}
+
+    			&--middle {
+    				display: none;
+    			}
+
+    			&--bottom {
+    				transform: rotate(-45deg);
+    				position: relative;
+    				right: 0;
+    				top: -12.5px;
+    			}
+    		}
+      }
+  	}
   }
 }

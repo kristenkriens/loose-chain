@@ -9,29 +9,168 @@
   <link rel="stylesheet" type="text/css" href="dist/css/styles.css">
 </head>
 <body>
-  <a href="#main" class="skipnav accessible">Skip to Main Content</a>
-  <header class="header">
-    <div class="wrapper">
-      <h1>Road Repair Workshop</h1>
-      <h2 class="small">Brought to you by</h2>
-      <h2>Loose Chain Bike Co.</h2>
-      <div class="header__bar">
-        <div class="header__bar-inner">
-          <p class="header__bar-text">July 3, 2017 2pm-5pm</p>
-          <a href="#" class="header__bar-button">Register Now</a>
+  <main id="main">
+    <section class="hero">
+      <div class="wrapper">
+        <h1>Road Repair Workshop</h1>
+        <h2 class="small">Brought to you by</h2>
+        <h2>Loose Chain Bike Co.</h2>
+        <div class="hero__bar">
+          <div class="hero__bar-inner">
+            <p class="hero__bar-text">July 3, 2017 2pm-5pm</p>
+            <a href="#" class="hero__bar-button">Register Now</a>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-  <main id="main">
-    <div class="wrapper">
-    </div>
+    </section>
+    <section class="header">
+      <div class="wrapper wrapper--small">
+        <div class="header__left">
+          <a href="#main"><img src="dist/images/logo-large.svg" alt="Loose Chain Bike Co. Logo" title="Loose Chain Bike Co. Logo"></a>
+        </div>
+        <div class="header__right">
+          <div class="header__hamburger">
+            <div class="header__hamburger-bar header__hamburger-bar--top"></div>
+            <div class="header__hamburger-bar header__hamburger-bar--middle"></div>
+            <div class="header__hamburger-bar header__hamburger-bar--bottom"></div>
+          </div>
+          <nav class="header__nav">
+            <ul>
+              <li><a href="#event-info" class="active">Event Info</a></li>
+              <li><a href="#about-us">About Us</a></li>
+              <li><a href="#workshop-reviews">Workshop Reviews</a></li>
+              <li><a href="#" class="header__nav-button">Register Now</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <section class="event-info" id="event-info">
+      <div class="heading">
+        <div class="wrapper wrapper--small">
+          <h2>Event Info</h2>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="event-info__left">
+          <p>Heading out of town on a bike trip is one of the best ways to enjoy summer weather and the great outdoors! Get down some road repair basics to become a more confident cyclist, and learn skills that you can apply to your daily commute all year-round. What we will cover:</p>
+          <ul class="event-info__list">
+            <li>Prepping for distance rides</li>
+            <li>Learn more about parts and components</li>
+            <li>How to patch, or change a tube</li>
+            <li>Tips for biking on busy roads</li>
+            <li>Bike maintenance for wet conditions</li>
+            <li>Tire tread pros and cons</li>
+          </ul>
+        </div>
+        <div class="event-info__right">
+          <div class="event-info__card-item">
+            <p>Who:</p>
+            <p>Anyone with an interest in touring or distance cycling</p>
+          </div>
+          <div class="event-info__card-item">
+            <p>What:</p>
+            <p>Road Repair Workshop</p>
+          </div>
+          <div class="event-info__card-item">
+            <p>Where:</p>
+            <p>483 Queen Street West</p>
+          </div>
+          <div class="event-info__card-item">
+            <p>When:</p>
+            <p>July 3, 2017</p>
+          </div>
+          <div class="event-info__card-item">
+            <p>Why:</p>
+            <p>Why not?</p>
+          </div>
+          <div class="event-info__card-item">
+            <p>How:</p>
+            <p><a href="#">Register</a> for only</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-us" id="about-us">
+      <div class="heading">
+        <div class="wrapper wrapper--small">
+          <h2>About Us</h2>
+        </div>
+      </div>
+      <div class="wrapper">
+        <p>Loose Chain Bike Co. specializes in the needs of the downtown Toronto bike commuter. With our network of 16 repair shops scattered throughout the city core, we do everything from spring tune-ups to emergency troubleshooting. Because of our vast number of locations, we can guarantee same day servicing and delivery to the location that’s most convenient for you. Through workshops and community events, we want to empower casual Toronto cyclists with strategies for safe urban biking, all year around.</p>
+      </div>
+      <div class="stats">
+        <div class="wrapper wrapper--large">
+          <div class="stats__item">
+            <p>16</p>
+            <p>Repair Shops</p>
+          </div>
+          <div class="stats__item">
+            <p>20K</p>
+            <p>Flat Tires Changed</p>
+          </div>
+          <div class="stats__item">
+            <p>205</p>
+            <p>Bike Mechanics</p>
+          </div>
+          <div class="stats__item">
+            <p>3</p>
+            <p>Readers Choice Awards</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="workshop-reviews" id="workshop-reviews">
+      <div class="heading">
+        <div class="wrapper wrapper--small">
+          <h2>Workshop Reviews</h2>
+        </div>
+      </div>
+      <div class="wrapper wrapper--large">
+        <i class="workshop-reviews__nav workshop-reviews__nav--left" aria-hidden="true"></i>
+        <div class="workshop-reviews__carousel">
+          <ul class="workshop-reviews__carousel-inner">
+            <li class="workshop-reviews__item">
+              <img src="dist/images/ryan.jpg" alt="Photo of Ryan McLaren" class="workshop-reviews__photo">
+              <p>“Who wants to be stuck in the city all summer long? I don’t like feeling stuck downtown when I know my bike can take me to some many interesting places. This workshop armed me with everything I needed to tackle the open road on my own. Smell ya later, city traffic.”</p>
+              <p>—Ryan McLaren</p>
+            </li>
+            <li class="workshop-reviews__item">
+              <img src="dist/images/samantha.jpg" alt="Photo of Samantha Island" class="workshop-reviews__photo">
+              <p>“I always wanted to take my bike out of town and explore more of Ontario – it’s such a beautiful province! After attending the road repair workshop last summer, I feel knowledgable about my bike and more confident to take on adventurous rides!”</p>
+              <p>—Samantha Island</p>
+            </li>
+          </ul>
+        </div>
+        <i class="workshop-reviews__nav workshop-reviews__nav--right" aria-hidden="true"></i>
+      </div>
+    </section>
   </main>
   <footer class="footer">
-    <div class="wrapper">
+    <div class="wrapper wrapper--small">
+      <div class="footer__left">
+        <p>© 2017 - Loose Chain Bike Co.</p>
+      </div>
+      <div class="footer__right">
+        <a href="#"><div class="footer__social-icon">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <p class="accessible">Twitter Link</p>
+        </div></a>
+        <a href="#"><div class="footer__social-icon">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <p class="accessible">Instagram Link</p>
+        </div></a>
+        <a href="#"><div class="footer__social-icon">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <p class="accessible">Facebook Link</p>
+        </div></a>
+      </div>
     </div>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
+  <script src="https://use.fontawesome.com/07dc8c3210.js"></script>
   <script src="dist/js/scripts.min.js"></script>
 </body>
 </html>
