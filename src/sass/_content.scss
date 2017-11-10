@@ -19,6 +19,10 @@
 
   &__left {
     width: calc(60% - 15px);
+
+    p {
+      margin-bottom: 15px;
+    }
   }
 
   &__right {
