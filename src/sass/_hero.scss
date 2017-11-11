@@ -1,4 +1,5 @@
 .hero {
+  background-color: $orange;
   background-image: url(../images/bike-by-andreas-kambanis.jpg);
   background-attachment: fixed;
   background-position: center center;
@@ -7,6 +8,22 @@
   min-height: 700px;
   width: 100%;
   position: relative;
+
+  &__main {
+    position: absolute;
+    top: calc(50% - 100px);
+    max-width: 750px;
+    padding-right: 30px;
+    transform: translateY(-50%);
+
+    @media (max-width: $md-width) {
+      top: calc(50% - 125px);
+    }
+
+    @media (max-width: $sm-width) {
+      padding-right: 15px;
+    }
+  }
 
   h2 {
     font-family: 'Lato', sans-serif;
