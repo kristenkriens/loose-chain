@@ -232,3 +232,21 @@
     }
   }
 }
+
+.register-now {
+  &__button {
+    padding: 15px 25px;
+    color: $white;
+    font-size: 25px;
+    text-align: center;
+    background-color: $orange;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: 300;
+    transition: 300ms background-color ease;
+
+    &:hover, &:active, &:focus {
+      background-color: $black;
+    }
+  }
+}
