@@ -83,11 +83,29 @@ $(function() {
     });
   }
 
-  $('.workshop-reviews__nav--left').click(function() {
+  function carouselHeight() {
+    let carouselPhotoHeight = $('.workshop-reviews__photo').height() + 25;
+    let carouselParagraphsHeight = $('.workshop-reviews__text').height();
+    let carouselHeight = carouselPhotoHeight + carouselParagraphsHeight;
+
+    $('.workshop-reviews__carousel').css('height', carouselHeight);
+  }
+
+  carouselHeight();
+
+  $(window).on('resize', function() {
+    carouselHeight();
+  });
+
+  $('.workshop-reviews__nav').on('click', function() {
+    carouselHeight();
+  });
+
+  $('.workshop-reviews__nav--left').on('click', function() {
     slide(slide_index - 1);
   });
 
-  $('.workshop-reviews__nav--right').click(function() {
+  $('.workshop-reviews__nav--right').on('click', function() {
     slide(slide_index + 1);
   });
 });
