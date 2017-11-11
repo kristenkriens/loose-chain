@@ -20,6 +20,15 @@
   &__left {
     width: calc(60% - 15px);
 
+    @media (max-width: $lg-width) {
+      width: calc(50% - 15px);
+    }
+
+    @media (max-width: $md-width) {
+      width: 100%;
+      order: 2;
+    }
+
     p {
       margin-bottom: 15px;
     }
@@ -29,6 +38,21 @@
     width: calc(40% - 15px);
     background-color: $grey;
     padding: 30px;
+
+    @media (max-width: $lg-width) {
+      width: calc(50% - 15px);
+    }
+
+    @media (max-width: $md-width) {
+      width: calc(100% + 60px);
+      margin: -50px -30px 50px -30px;
+    }
+
+    @media (max-width: $sm-width) {
+      width: calc(100% + 60px);
+      margin: -35px -15px 35px -15px;
+      padding: 30px 15px;
+    }
   }
 
   &__list {
@@ -78,8 +102,12 @@
       }
     }
 
-    a:hover {
-      text-decoration: underline;
+    a {
+      font-weight: 400;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -93,6 +121,14 @@
   &__item {
     text-align: center;
     width: calc(25% - calc(90px / 4));
+
+    @media (max-width: $lg-width) {
+      width: calc(50% - calc(45px / 2));
+    }
+
+    @media (max-width: $sm-width) {
+      width: 100%;
+    }
 
     p {
       color: $black;
@@ -154,6 +190,12 @@
     cursor: pointer;
     transition: 200ms border-color ease;
 
+    @media (max-width: $sm-width) {
+      width: 35px;
+      height: 35px;
+      top: 135px;
+    }
+
     &:hover {
       border-color: $orange;
     }
@@ -174,6 +216,10 @@
     width: 200px;
     margin: 0 auto 25px auto;
     display: block;
+
+    @media (max-width: $sm-width) {
+      width: 150px;
+    }
   }
 
   p {

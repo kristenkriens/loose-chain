@@ -17,7 +17,7 @@ $(function() {
   $(window).on('scroll', function() {
     var currentOffset = $(this).scrollTop();
     var navOffset = $('.header').offset().top;
-    var navHeight = $('.header').height()
+    var navHeight = $('.header').height();
 
     if(currentOffset >= (navOffset - (navHeight / 2) + 50)) {
       $('.header').addClass('sticky');
@@ -32,7 +32,7 @@ $(function() {
     $('.header li:not(:last-of-type) a').each(function () {
       var refElement = $($(this).attr('href'));
 
-      if (refElement.offset().top <= currentOffset + 102) {
+      if (refElement.offset().top <= currentOffset + navHeight) {
         $('.header li a').removeClass('active');
         $(this).addClass('active');
       } else {
