@@ -3,12 +3,16 @@
   width: 100%;
 
   h2 {
-    color: $white;
     font-size: 50px;
+    color: $white;
     text-align: center;
     width: 100%;
     line-height: 1;
     padding-top: 5px;
+
+    @media (max-width: $sm-width) {
+      font-size: 40px;
+    }
   }
 }
 
@@ -16,6 +20,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  .wrapper {
+    align-items: flex-start;
+  }
 
   &__left {
     width: calc(60% - 15px);
@@ -121,6 +129,7 @@
   &__item {
     text-align: center;
     width: calc(25% - calc(90px / 4));
+    margin-bottom: 25px;
 
     @media (max-width: $lg-width) {
       width: calc(50% - calc(45px / 2));
