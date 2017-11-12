@@ -6,7 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Loose Chain Bike Co. | Road Repair Workshop</title>
   <link type="image/png" href="dist/images/favicon.png" rel="icon">
-  <link rel="stylesheet" type="text/css" href="dist/css/styles.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="dist/css/styles.css">
 </head>
 <body>
   <main id="main">
@@ -129,26 +131,18 @@
         </div>
       </div>
       <div class="wrapper wrapper--large">
-        <i class="workshop-reviews__nav workshop-reviews__nav--left" aria-hidden="true"></i><span class="accessible">Previous Testimonial</span>
-        <div class="workshop-reviews__carousel">
-          <ul class="workshop-reviews__carousel-inner">
-            <li class="workshop-reviews__item">
-              <img src="dist/images/ryan.jpg" alt="Photo of Ryan McLaren" class="workshop-reviews__photo">
-              <div class="workshop-reviews__text">
-                <p>“Who wants to be stuck in the city all summer long? I don’t like feeling stuck downtown when I know my bike can take me to some many interesting places. This workshop armed me with everything I needed to tackle the open road on my own. Smell ya later, city traffic.”</p>
-                <p>—Ryan McLaren</p>
-              </div>
-            </li>
-            <li class="workshop-reviews__item">
-              <img src="dist/images/samantha.jpg" alt="Photo of Samantha Island" class="workshop-reviews__photo">
-              <div class="workshop-reviews__text">
-                <p>“I always wanted to take my bike out of town and explore more of Ontario – it’s such a beautiful province! After attending the road repair workshop last summer, I feel knowledgable about my bike and more confident to take on adventurous rides!”</p>
-                <p>—Samantha Island</p>
-              </div>
-            </li>
-          </ul>
+        <div class="workshop-reviews__slider">
+          <div class="workshop-reviews__item">
+            <img src="dist/images/ryan.jpg" alt="Photo of Ryan McLaren">
+            <p>“Who wants to be stuck in the city all summer long? I don’t like feeling stuck downtown when I know my bike can take me to some many interesting places. This workshop armed me with everything I needed to tackle the open road on my own. Smell ya later, city traffic.”</p>
+            <p>—Ryan McLaren</p>
+          </div>
+          <div class="workshop-reviews__item">
+            <img src="dist/images/samantha.jpg" alt="Photo of Samantha Island">
+            <p>“I always wanted to take my bike out of town and explore more of Ontario – it’s such a beautiful province! After attending the road repair workshop last summer, I feel knowledgable about my bike and more confident to take on adventurous rides!”</p>
+            <p>—Samantha Island</p>
+          </div>
         </div>
-        <i class="workshop-reviews__nav workshop-reviews__nav--right" aria-hidden="true"></i><span class="accessible">Next Testimonial</span>
       </div>
     </section>
     <section class="register-now" id="location">
@@ -183,6 +177,7 @@
   <script src="https://use.fontawesome.com/07dc8c3210.js"></script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy7JFwtVcDgCVqjaaDn-aicCtLvIGgDm4&callback=initMap"></script>
+    <script src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
   <script src="dist/js/scripts.min.js"></script>
 </body>
 </html>

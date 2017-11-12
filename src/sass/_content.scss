@@ -148,69 +148,11 @@
 .workshop-reviews {
   background-color: $grey;
 
-  .wrapper {
-    position: relative;
-  }
-
-  &__carousel {
+  &__slider {
     width: 100%;
-    height: 300px;
-    max-width: 1000px;
-    margin: 0 auto;
-    overflow:hidden;
-    position: relative;
-
-    &-inner {
-      position: absolute;
-      width: 200%;
-      height: 100%;
-      top: 0;
-    }
   }
 
-  &__item {
-    margin: 0 auto;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-  }
-
-  &__nav {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 150px;
-    cursor: pointer;
-    transition: 200ms border-color ease;
-
-    @media (max-width: $sm-width) {
-      width: 35px;
-      height: 35px;
-      top: 105px;
-    }
-
-    &:hover {
-      border-color: $orange;
-    }
-
-    &--left {
-      transform: rotate(135deg);
-      left: 40px;
-    }
-
-    &--right {
-      transform: rotate(-45deg);
-      right: 40px;
-    }
-  }
-
-  &__photo {
+  img {
     border-radius: 50%;
     width: 200px;
     margin: 0 auto 25px auto;
@@ -228,6 +170,48 @@
 
     &:first-of-type {
       margin-bottom: 5px;
+    }
+  }
+
+  .slick-arrow {
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    transform: translateX(0);
+    z-index: 10;
+
+    &:before {
+      color: $black;
+      font-family: 'FontAwesome';
+      font-size: 75px;
+      opacity: 1;
+      transition: 200ms color ease;
+    }
+
+    &:hover, &:active {
+      &:before {
+        color: $orange;
+      }
+    }
+
+    @media (max-width: $sm-width) {
+      top: 25px;
+    }
+  }
+
+  .slick-prev {
+    left: -38px;
+
+    &:before {
+      content: '\f104';
+    }
+  }
+
+  .slick-next {
+    right: -38px;
+
+    &:before {
+      content: '\f105';
     }
   }
 }
