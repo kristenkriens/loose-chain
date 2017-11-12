@@ -13,7 +13,6 @@
     position: absolute;
     top: calc(50% - 100px);
     max-width: 750px;
-    padding: 0 30px;
     transform: translateY(-50%);
 
     @media (max-width: $md-width) {
