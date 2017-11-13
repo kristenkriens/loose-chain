@@ -126,10 +126,17 @@
   background-attachment: fixed;
   background-size: cover;
 
+  .wrapper {
+    padding-bottom: 100px;
+
+    @media (max-width: $sm-width) {
+      padding-bottom: 75px;
+    }
+  }
+
   &__item {
     text-align: center;
     width: calc(25% - calc(90px / 4));
-    margin-bottom: 25px;
 
     @media (max-width: $lg-width) {
       width: calc(50% - calc(45px / 2));
@@ -140,15 +147,18 @@
     }
 
     p {
-      color: $black;
-      font-weight: 400;
-      font-size: 25px;
-
       &:first-of-type {
         font-size: 100px;
         color: $white;
         font-weight: 600;
         text-shadow: 0 0 5px rgba(0,0,0,0.25);
+      }
+
+      &:last-of-type {
+        color: $black;
+        font-weight: 400;
+        font-size: 25px;
+        margin-top: -15px;
       }
     }
   }
@@ -238,6 +248,10 @@
     text-transform: uppercase;
     font-weight: 300;
     transition: 300ms background-color ease;
+
+    @media (max-width: $xs-width) {
+      width: 100%;
+    }
 
     &:hover, &:active, &:focus {
       background-color: $black;

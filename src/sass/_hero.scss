@@ -9,14 +9,24 @@
   width: 100%;
   position: relative;
 
+  @media (max-width: $sm-width) {
+    min-height: 600px;
+  }
+
   &__main {
     position: absolute;
     top: calc(50% - 100px);
+    width: calc(100% - 60px);
     max-width: 750px;
     transform: translateY(-50%);
 
     @media (max-width: $md-width) {
       top: calc(50% - 125px);
+    }
+
+    @media (max-width: $sm-width) {
+      width: calc(100% - 30px);
+      text-align: center;
     }
   }
 
@@ -75,6 +85,10 @@
     left: 0;
     right: 0;
 
+    @media (max-width: $md-width) {
+      bottom: 50px;
+    }
+
     &-inner {
       display: flex;
       justify-content: space-between;
@@ -108,6 +122,12 @@
         margin-bottom: 20px;
         text-align: center;
       }
+
+      @media (max-width: $sm-width) {
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     &-button {
@@ -118,15 +138,19 @@
       font-size: 30px;
       padding: 15px 25px;
       text-align: center;
-      transition: 300ms transform ease;
+      transition: 300ms background-color ease;
 
       @media (max-width: $md-width) {
         font-size: 25px;
         margin: 0 auto;
       }
 
+      @media (max-width: $xs-width) {
+        width: 100%;
+      }
+
       &:hover {
-        transform: scale(1.1);
+        background-color: $orange;
       }
     }
   }
