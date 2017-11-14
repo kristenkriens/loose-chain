@@ -83,7 +83,7 @@
 
           @media (max-width: $md-width) {
             display: inline-block;
-            background-color: $orange;
+            background-color: $black;
             padding: 15px 25px;
             font-size: 25px;
             font-weight: 300;
@@ -93,7 +93,7 @@
             transition: 200ms background-color ease;
 
             &:hover, &:active, &:focus {
-              background-color: $black;
+              background-color: $orange;
             }
           }
         }

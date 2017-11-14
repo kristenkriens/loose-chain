@@ -264,7 +264,7 @@
     color: $white;
     font-size: 25px;
     text-align: center;
-    background-color: $orange;
+    background-color: $black;
     margin: 0 auto;
     text-transform: uppercase;
     font-weight: 300;
@@ -275,7 +275,7 @@
     }
 
     &:hover, &:active, &:focus {
-      background-color: $black;
+      background-color: $orange;
     }
   }
 }
