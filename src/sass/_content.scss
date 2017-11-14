@@ -120,6 +120,28 @@
   }
 }
 
+.about-us {
+  .wrapper.clearfix {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+    max-width: 350px;
+    float: right;
+    padding-left: 25px;
+    margin-top: 5px;
+
+    @media (max-width: 650px) {
+      margin-top: 0;
+      float: none;
+      padding-left: 0;
+      margin: 0 auto 15px;
+      display: block;
+    }
+  }
+}
+
 .stats {
   background-image: url(../images/bike-by-cycles-victoire.jpg);
   background-position: center center;
