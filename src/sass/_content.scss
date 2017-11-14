@@ -125,18 +125,22 @@
     display: block;
   }
 
+  p {
+    &:first-of-type {
+      margin-bottom: 15px;
+    }
+  }
+
   img {
-    width: 100%;
-    max-width: 350px;
     float: right;
-    padding-left: 25px;
-    margin-top: 5px;
+    max-width: 300px;
+    margin: 5px 0 0 15px;
 
     @media (max-width: 650px) {
-      margin-top: 0;
       float: none;
-      padding-left: 0;
-      margin: 0 auto 15px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 15px;
       display: block;
     }
   }
