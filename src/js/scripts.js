@@ -21,12 +21,12 @@ $(function() {
     var navOffset = $('.header').offset().top;
     var navHeight = $('.header').height();
 
-    if (currentOffset >= (navOffset - (navHeight / 2) + 50)) {
+    if (currentOffset >= (navOffset - (navHeight / 2) + 40)) {
       $('.header').addClass('sticky');
       $('.header + section').css('margin-top', navHeight);
     }
 
-    if (currentOffset < (navOffsetOrig - (navHeight / 2) + 50)) {
+    if (currentOffset < (navOffsetOrig - (navHeight / 2) + 40)) {
       $('.header').removeClass('sticky');
       $('.header + section').css('margin-top', 0);
     }
