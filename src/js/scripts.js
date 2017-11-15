@@ -43,6 +43,38 @@ $(function() {
     });
   });
 
+  // Makes numbers in stats section count up from 0
+  function countUp() {
+    $('.stats__number').each(function() {
+      var $this = $(this);
+      var countTo = $this.attr('data-count');
+      var units = $this.attr('data-units');
+
+      if(units === 'thousand') {
+        countTo = countTo / 100;
+      }
+
+      $({ countNum: $this.text()}).animate({ countNum: countTo }, {
+        duration: 1500,
+        easing: 'linear',
+        step: function() {
+          if(units === 'thousand') {
+            $this.text(Math.floor(this.countNum)).addClass('stats__number--thousand');
+          } else {
+            $this.text(Math.floor(this.countNum));
+          }
+        },
+        complete: function() {
+          if(units === 'thousand') {
+            $this.text(this.countNum).addClass('stats__number--thousand');
+          } else {
+            $this.text(this.countNum);
+          }
+        }
+      });
+    });
+  }
+
   // Toggles mobile nav on click or hamburger
   $('.header__hamburger').on('click', function() {
     if($(window).width() < 768) {
@@ -63,6 +95,12 @@ $(function() {
   $('.workshop-reviews__slider').slick({
     adaptiveHeight: true,
     autoplay: true
+  });
+
+  // Initializes the starting of the countUp function
+  $('.stats').appear();
+  $('.stats').on('appear', function() {
+    countUp();
   });
 
 });

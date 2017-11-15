@@ -188,6 +188,12 @@
       }
     }
   }
+
+  &__number--thousand {
+    &:after {
+      content: 'K';
+    }
+  }
 }
 
 .workshop-reviews {
