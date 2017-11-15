@@ -8,7 +8,8 @@
     text-align: center;
     width: 100%;
     line-height: 1;
-    padding-top: 5px;
+    margin-top: 5px;
+    margin-bottom: -5px;
 
     @media (max-width: $sm-width) {
       font-size: 40px;
