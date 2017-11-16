@@ -9,7 +9,7 @@
   width: 100%;
   position: relative;
 
-  @media (max-width: $sm-width) {
+  @media (max-device-width: $md-width) {
     background-attachment: scroll;
     min-height: 600px;
   }
