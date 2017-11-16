@@ -153,6 +153,10 @@
   background-attachment: fixed;
   background-size: cover;
 
+  @media (max-width: $sm-width) {
+    background-attachment: scroll;
+  }
+
   .wrapper {
     padding-bottom: 100px;
 

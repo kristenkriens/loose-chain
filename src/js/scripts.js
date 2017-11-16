@@ -98,8 +98,8 @@ $(function() {
   });
 
   // Initializes the starting of the countUp function
-  $('.stats').appear();
-  $('.stats').on('appear', function() {
+  $('.stats__number').appear();
+  $('.stats__number').on('appear', function() {
     countUp();
   });
 
