@@ -48,3 +48,9 @@ function initMap() {
     map.setCenter(center);
   });
 };
+
+var tag = document.createElement('script');
+    tag.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAsofyZPUvRBbwnj3M07hmnG8iJiKoy354&callback=initMap";
+    tag.defer = true;
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
